@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>License Assignment Notification</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fc;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #28a745, #4caf50);
+        color: white;
+        text-align: center;
+        padding: 25px;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .content {
+        padding: 30px;
+        text-align: left;
+      }
+      .content p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      .details {
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .details h3 {
+        color: #28a745;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .details ul {
+        list-style: none;
+        padding: 0;
+      }
+      .details ul li {
+        padding: 12px;
+        background: #ffffff;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+      }
+      .details ul li strong {
+        flex: 1;
+      }
+      .footer {
+        background: #f1f5f9;
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        color: #666;
+      }
+      @media (max-width: 600px) {
+        .content {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">License Assignment Notification</div>
+      <div class="content">
+        <p>Hello,</p>
+        <p>
+          You have been assigned a <strong>{{ license_type }}</strong> license.
+        </p>
+        <div class="details">
+          <h3>License Details:</h3>
+          <ul>
+            <li><strong>License Type:</strong> {{ license_type }}</li>
+            <!-- <li><strong>Assigned At:</strong> {{ assigned_at }}</li> -->
+            <li><strong>Assigned By:</strong> {{ initiator_email }}</li>
+          </ul>
+        </div>
+        <p>If you have any questions, please contact our support team.</p>
+      </div>
+      <div class="footer">&copy; 2025 Pratyaksha KYC | All Rights Reserved</div>
+    </div>
+  </body>
+</html>
