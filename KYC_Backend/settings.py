@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'corsheaders',
     'rest_framework',
     'registration_API',
@@ -43,6 +44,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 SIMPLE_JWT = {
@@ -138,6 +140,11 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
+
+STATIC_URL = '/static/'
+
+# Add this line to define the STATIC_ROOT
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_collected')
 
 EMAIL_DEBUG = True
 
